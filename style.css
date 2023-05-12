@@ -1,0 +1,159 @@
+/* navbar styles */
+nav {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Form Container Styles */
+.form-container {
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form-container input[type="text"],
+.form-container select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.form-container button[type="submit"],
+.form-container button[type="button"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.form-container button[type="button"] {
+  background-color: #f44336;
+}
+
+.form-error {
+  color: red;
+  margin-top: 10px;
+}
+
+/* Table Container Styles */
+.table-container {
+  width: 80%;
+  margin: 50px auto;
+}
+
+.table-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#user-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#user-table th,
+#user-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+#user-table th {
+  background-color: #f2f2f2;
+}
+
+#user-table td:last-child {
+  text-align: center;
+}
+
+#user-table button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#user-table button.edit {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+#user-table button.delete {
+  background-color: #f44336;
+  color: #fff;
+}
+
+/* action buttons styles */
+
+/* Style for the action column */
+td.actions {
+  text-align: center;
+}
+
+/* Style for the edit button */ 
+/* td.actions button.edit {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 2px 2px;
+  cursor: pointer;
+}
+
+/* Style for the delete button */
+/* td.actions button.delete {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 2px 2px;
+  cursor: pointer;
+} */

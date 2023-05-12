@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Registration Management System</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    
+    <div class="form-container">
+      <h2>User Registration Form</h2>
+      <form id="user-form" onsubmit="addUser(event)">
+        <input type="hidden" id="user-id">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="id">ID Number:</label>
+        <input type="text" id="user-id-number" name="user-id-number" required>
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+          <option value="">Select Country</option>
+          <option value="Kenya">Kenya</option>
+          <option value="Uganda">Uganda</option>
+          <option value="Tanzania">Tanzania</option>
+          
+        </select>
+        <label for="languages">Languages Spoken:</label>
+        <input type="text" id="languages" name="languages" required>
+        <button type="submit">Create</button>
+        <button type="button" onclick="resetForm()">Reset</button>
+        
+      </form>
+      <div class="form-error" id="form-error"></div>
+    </div>
+    <div class="table-container">
+      <h2>User List</h2>
+      <table id="user-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>ID Number</th>
+            <th>Country</th>
+            <th>Languages Spoken</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="user-table-body"></tbody>
+      </table>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
+
+
+ 

@@ -8,6 +8,12 @@ const tableBody = document.querySelector('#user-table-body');
 
 let users = [];
 
+// Check if users array is present in local storage
+if (localStorage.getItem('users')) {
+  users = JSON.parse(localStorage.getItem('users'));
+  displayUsers();
+}
+
 function resetForm() {
   userForm.reset();
   document.querySelector('#user-id').value = '';
@@ -32,10 +38,12 @@ function displayUsers() {
     const actionCell = document.createElement('td');
     const editButton = document.createElement('button');
     editButton.textContent = 'Edit';
+    editButton.classList.add('edit-btn');
     editButton.addEventListener('click', () => editUser(index));
     actionCell.appendChild(editButton);
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Delete';
+    deleteButton.classList.add('delete-btn');
     deleteButton.addEventListener('click', () => deleteUser(index));
     actionCell.appendChild(deleteButton);
     row.appendChild(actionCell);
@@ -59,6 +67,8 @@ function addUser(event) {
   } else {
     users.push({ name, idNumber, country, languages });
   }
+  // Store users array in local storage
+  localStorage.setItem('users', JSON.stringify(users));
   resetForm();
   displayUsers();
 }
@@ -74,6 +84,8 @@ function editUser(index) {
 
 function deleteUser(index) {
   users.splice(index, 1);
+  // Store users array in local storage
+  localStorage.setItem('users', JSON.stringify(users));
   displayUsers();
 }
 

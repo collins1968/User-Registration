@@ -1,11 +1,13 @@
 /* navbar styles */
 nav {
-  background-color: #333;
+  background-color: #3f3939;
   color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 nav ul {
@@ -26,12 +28,13 @@ nav ul li a {
 
 /* Form Container Styles */
 .form-container {
+  background-color: #eee6e6;
   width: 50%;
   margin: 0 auto;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid hsl(0, 17%, 95%);
+  border-radius: 10px;
+  box-shadow: 10 10 10px rgba(0, 0, 0, 0.1);
 }
 
 .form-container h2 {
@@ -46,7 +49,7 @@ nav ul li a {
 
 .form-container input[type="text"],
 .form-container select {
-  width: 100%;
+  width: 90%;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -56,7 +59,7 @@ nav ul li a {
 .form-container button[type="submit"],
 .form-container button[type="button"] {
   display: block;
-  width: 100%;
+  width: 90%;
   padding: 10px;
   border-radius: 5px;
   border: none;
@@ -123,37 +126,40 @@ nav ul li a {
   color: #fff;
 }
 
-/* action buttons styles */
-
-/* Style for the action column */
-td.actions {
-  text-align: center;
-}
-
-/* Style for the edit button */ 
-/* td.actions button.edit {
+.edit-btn{
+  border: none;
   background-color: #4CAF50;
   color: white;
-  border: none;
-  padding: 6px 10px;
+  padding: 8px 16px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 14px;
-  margin: 2px 2px;
+  font-size: 16px;
+  margin: 4px 2px;
   cursor: pointer;
+  border-radius: 4px;
 }
-
-/* Style for the delete button */
-/* td.actions button.delete {
+.delete-btn {
+  border: none;
   background-color: #f44336;
   color: white;
-  border: none;
-  padding: 6px 10px;
+  padding: 8px 16px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 14px;
-  margin: 2px 2px;
+  font-size: 16px;
+  margin: 4px 2px;
   cursor: pointer;
-} */
+  border-radius: 4px;
+}
+
+.edit-btn:hover
+{
+  background-color: #4CAF50;
+}
+.delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+
+
